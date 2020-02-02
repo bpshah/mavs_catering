@@ -72,11 +72,11 @@ public class LoginController extends HttpServlet {
 						//redirect to appropriate home page based on role
 						String role = user.getRole();
 						if(role.equals("Admin"))
-						  url = "/Test.jsp"; 
+						  url = "/AdminHome.jsp"; 
 						else if(role.equals("Repairer"))
 						  url = "/repairerHome.jsp";
 						else if(role.equals("User"))
-							  url = "/userHome.jsp";
+							  url = "/UserHome.jsp";
 						else
 						  url = "/facilityManagerHome.jsp";
 

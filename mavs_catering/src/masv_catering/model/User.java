@@ -16,10 +16,14 @@ public class User implements Serializable {
 	private String utaId;
 	private String phone;
 	private String email;
-	private String address;
+	private String streetNumber;
+	private String streetName;
+	private String city;
+	private String state;
+	private String zipcode;
 
 	public void setUser(String username,String password, String role,String utaId,String firstName,String lastName,String phone,
-			String email,String address) 
+			String email, String streetNumber,String streetName, String city, String state, String zipcode) 
 	{	
 		System.out.println(username+" : "+role+": "+firstName);
 		this.username = username;
@@ -30,7 +34,11 @@ public class User implements Serializable {
 		this.utaId = utaId;
 		this.phone = phone;
 		this.email = email;
-		this.address = address;
+		this.streetNumber = streetNumber;
+		this.streetName = streetName;
+		this.city = city;
+		this.state = state;
+		this.zipcode = zipcode;
 
 	}
 	
@@ -42,7 +50,7 @@ public class User implements Serializable {
 	
 	
 	public void updateUser(String password,String utaId,String firstName,String lastName,String phone,
-			String email,String address) 
+			String email, String address, String streetNumber,String streetName, String city, String state, String zipcode) 
 	{	
 		System.out.println("first name:edit user "+firstName);
 		this.password = password;
@@ -51,7 +59,11 @@ public class User implements Serializable {
 		this.utaId = utaId;
 		this.phone = phone;
 		this.email = email;
-		this.address = address;
+		this.streetNumber = streetNumber;
+		this.streetName = streetName;
+		this.city = city;
+		this.state = state;
+		this.zipcode = zipcode;
 
 	}
 
@@ -153,13 +165,9 @@ public class User implements Serializable {
 	}
 
 
-
-
 	public String getEmail() {
 		return email;
 	}
-
-
 
 
 	public void setEmail(String email) {
@@ -168,19 +176,52 @@ public class User implements Serializable {
 
 
 
-
-	public String getAddress() {
-		return address;
+	public String getStreetNumber() {
+		return streetNumber;
 	}
 
 
-
-
-	public void setAddress(String address) {
-		this.address = address;
+	public void setStreetNumber(String streetNumber) {
+		this.streetNumber = streetNumber;
 	}
 
 
+	public String getStreetName() {
+		return streetName;
+	}
+
+
+	public void setStreetName(String streetName) {
+		this.streetName = streetName;
+	}
+	
+	
+	public String getCity() {
+		return city;
+	}
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getState() {
+		return state;
+	}
+
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZipcode() {
+		return zipcode;
+	}
+
+
+	public void setZipcodee(String zipcode) {
+		this.zipcode = zipcode;
+	}
 
 
 	/************ VALIDATIONS *************/

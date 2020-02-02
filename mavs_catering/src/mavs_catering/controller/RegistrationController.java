@@ -53,7 +53,9 @@ public class RegistrationController extends HttpServlet {
 						request.getParameter("role"),  request.getParameter("utaId"),
 						request.getParameter("firstName"), request.getParameter("lastName"), 
 						request.getParameter("phone"),request.getParameter("email"), 
-						request.getParameter("address"));
+						request.getParameter("streetNumber"),request.getParameter("streetName"),
+						request.getParameter("city"),request.getParameter("state"),
+						request.getParameter("zipcode"));
 				UserErrorMsgs UerrorMsgs = new UserErrorMsgs();
 				//user.validateUser(user, UerrorMsgs);
 				session.setAttribute("User",user);

@@ -70,10 +70,35 @@
     </tr>
     
     <tr>
-    <td> Address : </td>
-    <td> <input name="address" value="<c:out value='${User.address}'/>" type="text" maxlength="45">  </td>
+    <td> Street Number : </td>
+    <td> <input name="streetNumber" value="<c:out value='${User.address}'/>" type="text" maxlength="45">  </td>
   	<td> <input name="addressError"  value="<c:out value='${errorMsgs.addressError}'/>" type="text"  style ="background-color: white; color: red; border: none; width: 800px"   disabled="disabled" maxlength="60"> </td>
     </tr>
+    
+    <tr>
+    <td> Street Name : </td>
+    <td> <input name="streetName" value="<c:out value='${User.address}'/>" type="text" maxlength="45">  </td>
+  	<td> <input name="addressError"  value="<c:out value='${errorMsgs.addressError}'/>" type="text"  style ="background-color: white; color: red; border: none; width: 800px"   disabled="disabled" maxlength="60"> </td>
+    </tr>
+    
+    <tr>
+    <td> City : </td>
+    <td> <input name="city" value="<c:out value='${User.city}'/>" type="text" maxlength="45">  </td>
+  	<td> <input name="addressError"  value="<c:out value='${errorMsgs.addressError}'/>" type="text"  style ="background-color: white; color: red; border: none; width: 800px"   disabled="disabled" maxlength="60"> </td>
+    </tr>
+    
+    <tr>
+    <td> State : </td>
+    <td> <input name="state" value="<c:out value='${User.state}'/>" type="text" maxlength="45">  </td>
+  	<td> <input name="addressError"  value="<c:out value='${errorMsgs.addressError}'/>" type="text"  style ="background-color: white; color: red; border: none; width: 800px"   disabled="disabled" maxlength="60"> </td>
+    </tr>
+    
+    <tr>
+    <td> Zipcode : </td>
+    <td> <input name="zipcode" value="<c:out value='${User.zipcode}'/>" type="text" maxlength="45">  </td>
+  	<td> <input name="addressError"  value="<c:out value='${errorMsgs.addressError}'/>" type="text"  style ="background-color: white; color: red; border: none; width: 800px"   disabled="disabled" maxlength="60"> </td>
+    </tr>
+    
     
     <tr>
     <td colspan="2"><i>(*) Mandatory field</i></td>

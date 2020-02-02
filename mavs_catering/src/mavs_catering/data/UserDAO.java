@@ -15,7 +15,7 @@ static SQLConnection DBMgr = SQLConnection.getInstance();
 	public static void registerUser(User user) {
 		Statement stmt = null;   
 		Connection conn = SQLConnection.getDBConnection();  
-		String registerUser = "INSERT INTO USER (username, password, role, utaid, firstname, lastname, phone, email, address) ";					
+		String registerUser = "INSERT INTO USER (username, password, role, utaid, firstname, lastname, phone, email, streetname, streetno, city, state, zipcode) ";					
 		registerUser += " VALUES ('"  
 				+ user.getUsername() + "','"
 				+ user.getPassword() + "','"		
@@ -25,7 +25,11 @@ static SQLConnection DBMgr = SQLConnection.getInstance();
 				+ user.getLastName() + "',"
 				+ user.getPhone() + ",'"		
 				+ user.getEmail() + "','"
-				+ user.getAddress() + "')" ;
+				+ user.getStreetName() + "','"
+				+ user.getStreetNumber() + "','"
+				+ user.getCity() + "','"
+				+ user.getState() + "','"
+				+ user.getZipcode() + "')" ;
 		System.out.println("Query: "+registerUser);
 		
 		try {   
@@ -90,8 +94,12 @@ static SQLConnection DBMgr = SQLConnection.getInstance();
 				String lastName  = userList.getString("lastname");
 				String phone = userList.getString("phone");
 				String email  = userList.getString("email");
-				String address  = userList.getString("address");
-				user.setUser( username, password, role, utaId, firstName, lastName,phone, email, address);				  	
+				String streetname  = userList.getString("streetname");
+				String streetno  = userList.getString("streetno");
+				String city  = userList.getString("city");
+				String state  = userList.getString("state");
+				String zipcode  = userList.getString("zipcode");
+				user.setUser( username, password, role, utaId, firstName, lastName,phone, email, streetname, streetno, city, state, zipcode);				  	
 			}
 			
 			} catch (SQLException e) {
